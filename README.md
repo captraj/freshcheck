@@ -23,7 +23,7 @@ FreshCheck is an intelligent system designed to identify fruits and vegetables i
 
 1. **Integrate the models from two different repositories.**
    - First Repository : [https://github.com/captraj/fruit-veg-freshness-ai]
-   - 
+   - Second Repository : [https://github.com/captraj/mobilenet-fruitsveggiesv1]
 
 ## Future Plans
 - **Mobile App Development**: Consider implementing a mobile application for FreshCheck, allowing users to assess fruit and vegetable freshness conveniently on their smartphones.
