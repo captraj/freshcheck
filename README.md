@@ -27,6 +27,11 @@ FreshCheck is an intelligent system designed to identify fruits and vegetables i
 
 2. **Integrate two models and create an efficient API to utilize both of the models.**
 
+## Current Challenges
+
+
+
+
 ## Future Plans
 - **Mobile App Development**: Consider implementing a mobile application for FreshCheck, allowing users to assess fruit and vegetable freshness conveniently on their smartphones.
 - **Improved Model**: Explore opportunities to enhance the freshness assessment model by incorporating advanced machine learning techniques and expanding the dataset.
