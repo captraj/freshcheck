@@ -1,0 +1,1 @@
+# Describe the stacks and organization of the web interface
