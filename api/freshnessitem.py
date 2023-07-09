@@ -3,7 +3,6 @@ import io
 import numpy as np
 from keras.models import load_model
 from PIL import Image
-from io import BytesIO
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
