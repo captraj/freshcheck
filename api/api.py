@@ -75,8 +75,26 @@ def ident_type(img): #identify type of fruit/veg using pytorch
                     'potato', 'raddish', 'soy beans', 'spinach', 'sweetcorn', 'sweetpotato', 'tomato', 'turnip',
                     'watermelon']
     with torch.no_grad():
+        img = transform(img)
+        img = img.unsqueeze(0)
         output = model(img)
 
     _, predicted_idx = torch.max(output, 1)
     predicted_label = class_labels[predicted_idx.item()]
     return predicted_label
+
+
+@app.route('/classify', methods=['POST'])
+def classify():
+    if 'image' not in request.files:
+        return jsonify({'error': 'No image found'})
+
+    image = request.files['image']
+    img = Image.open(image)
+    is_fresh = 1 - evaluate_rotten_vs_fresh(img)
+    pred_type = ident_type(img)
+    return jsonify({'prediction': str(is_fresh), 'freshness':ret_fresh(is_fresh), 'type':pred_type})
+
+
+if __name__ == '__main__':
+    app.run(host='::', port=5000)
