@@ -74,5 +74,9 @@ def ident_type(img): #identify type of fruit/veg using pytorch
                     'lemon', 'lettuce', 'mango', 'onion', 'orange', 'paprika', 'pear', 'peas', 'pineapple', 'pomegranate',
                     'potato', 'raddish', 'soy beans', 'spinach', 'sweetcorn', 'sweetpotato', 'tomato', 'turnip',
                     'watermelon']
-    
-    
+    with torch.no_grad():
+        output = model(img)
+
+    _, predicted_idx = torch.max(output, 1)
+    predicted_label = class_labels[predicted_idx.item()]
+    return predicted_label
