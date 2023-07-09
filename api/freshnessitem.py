@@ -11,13 +11,13 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 # Classify fresh/rotten
-def print_fresh(res):
-    threshold_fresh = 0.10  # set according to standards
+def ret_fresh(res):
+    threshold_fresh = 0.90  # set according to standards
     threshold_medium = 0.50  # set according to standards
-    if res < threshold_fresh:
-        return "The item is FRESH!"
-    elif threshold_fresh < res < threshold_medium:
-        return "The item is MEDIUM FRESH"
+    if res > threshold_fresh:
+        return "The item is VERY FRESH!"
+    elif threshold_fresh > res > threshold_medium:
+        return "The item is FRESH"
     else:
         return "The item is NOT FRESH"
 
@@ -64,8 +64,8 @@ def classify():
 
     image = request.files['image']
     img = Image.open(image)
-    is_rotten = evaluate_rotten_vs_fresh(img)
-    return jsonify({'prediction': str(is_rotten), 'freshness':print_fresh(is_rotten)})
+    is_fresh = 1 - evaluate_rotten_vs_fresh(img)
+    return jsonify({'prediction': str(is_fresh), 'freshness':ret_fresh(is_fresh)})
 
 if __name__ == '__main__':
     app.run(host='::', port=5000)
