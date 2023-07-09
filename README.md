@@ -31,7 +31,7 @@ FreshCheck is an intelligent system designed to identify fruits and vegetables i
 
 1. **Decide which stack to use in the API server creations**  
    - Python : Flask(currently preffered), FastAPI
-   - JS : NodeJS
+   - JS : NodeJS (Express)
 
 2. **Decide the Frontend Stack (Currently planned)**
    - Framework : ReactJS
