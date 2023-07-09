@@ -2,6 +2,7 @@
 
 FreshCheck is an intelligent system designed to identify fruits and vegetables in images and provide a freshness score. This repository includes code for the API, website, and server components of the FreshCheck system.
 
+
 ## Steps to Run the Project
 
 1. **API Implementation**
@@ -19,6 +20,7 @@ FreshCheck is an intelligent system designed to identify fruits and vegetables i
    - Implement the server code to handle requests and responses between the website and the API.
    - Configure the server to ensure smooth data flow and efficient functionality.
 
+
 ## Integration Plans
 
 1. **Integrate the models from two different repositories**
@@ -27,13 +29,19 @@ FreshCheck is an intelligent system designed to identify fruits and vegetables i
 
 2. **Integrate two models and create an efficient API to utilize both of the models.**
 
+
+## Progress
+
+1. **API DEVELOPMENT**
+   - API is ready, and is deployable
+   - API is deployed using flask
+   - It recieves 'image' as FORM input and returns a json with type,freshness score and freshness category
+   - API docs is a plus point that has to added
+
+
 ## Current Challenges
 
-1. **Decide which stack to use in the API server creations**  
-   - Python : Flask(currently preffered), FastAPI
-   - JS : NodeJS (Express)
-
-2. **Decide the Frontend Stack (Currently planned)**
+1. **Decide the Frontend Stack (Currently planned)**
    - Framework : ReactJS
    - Build tool : Vite
 
