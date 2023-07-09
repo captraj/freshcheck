@@ -49,8 +49,6 @@ def classify():
 
     image = request.files['image']
     img = Image.open(image)
+    is_rotten = evaluate_rotten_vs_fresh(img)
+    return jsonify({'prediction': is_rotten, 'freshness':print_fresh(is_rotten)})
 
-# Example usage:
-img_path = 'image-to-eval.png'
-is_rotten = evaluate_rotten_vs_fresh(img_path)
-print(f'Prediction: {is_rotten}',print_fresh(is_rotten))
