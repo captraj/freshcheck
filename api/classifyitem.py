@@ -45,7 +45,6 @@ def classify():
 
     _, predicted_idx = torch.max(output, 1)
     predicted_label = class_labels[predicted_idx.item()]
-
     return jsonify({'classification': predicted_label})
 
 
