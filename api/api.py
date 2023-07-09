@@ -48,7 +48,7 @@ def pre_proc_img(image_data):
 
 def evaluate_rotten_vs_fresh(image_path):
     # Load and predict using the model
-    model = load_model('rottenvsfresh98pval.h5')
+    model = load_model('api/rottenvsfresh98pval.h5')
     prediction = model.predict(pre_proc_img(image_path))
 
     return prediction[0][0]
@@ -59,7 +59,7 @@ def ident_type(img): #identify type of fruit/veg using pytorch
     model = models.mobilenet_v2(weights=None)
     num_classes = 36  # Update with the number of classes in your model
     model.classifier[1] = nn.Linear(model.last_channel, num_classes)
-    model.load_state_dict(torch.load('modelforclass.pth', map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load('api/modelforclass.pth', map_location=torch.device('cpu')))
     model.eval()
 
     # Define the data transforms and class labels
