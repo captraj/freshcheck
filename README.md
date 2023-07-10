@@ -52,3 +52,5 @@ FreshCheck is an intelligent system designed to identify fruits and vegetables i
 - **Integration with Supply Chain Management**: Investigate possibilities for integrating FreshCheck with existing supply chain management systems to improve inventory management and quality control processes.
 
 Please note that this README file provides an outline for the project, and the implementation steps are yet to be completed.
+
+
