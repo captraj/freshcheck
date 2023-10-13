@@ -2,6 +2,7 @@
 
 FreshCheck is an intelligent system designed to identify fruits and vegetables in images and provide a freshness score. This repository includes code for the API, website, and server components of the FreshCheck system.
 
+# STAR this project if it helped you. :)
 
 ## Steps to Run the Project
 
